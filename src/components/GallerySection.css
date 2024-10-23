@@ -1,0 +1,46 @@
+/* GallerySection.css */
+
+.gallery-section {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .gallery-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .gallery-image-wrapper {
+    position: relative;
+  }
+  
+  .gallery-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .gallery-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+  }
+  
+  .gallery-overlay-left {
+    left: 0;
+  }
+  
+  .gallery-overlay-right {
+    right: 0;
+  }
+  
+  .gallery-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* 사용자가 클릭할 수 있는 영역을 인식하도록 강조 */
+  }
+  
