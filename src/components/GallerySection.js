@@ -26,27 +26,29 @@ const GallerySection = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const currentSection = sectionRef.current;
+  
     const observer = new IntersectionObserver(
-  ([entry]) => {
-    if (entry.isIntersecting) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      {
+        threshold: window.innerWidth > 768 ? 0.2 : 0.1,
+        rootMargin: window.innerWidth > 768 ? '0px 0px -100px 0px' : '0px 0px -50px 0px'
+      }
+    );
+  
+    if (currentSection) {
+      observer.observe(currentSection);
     }
-  },
-  {
-    threshold: window.innerWidth > 768 ? 0.2 : 0.1,
-    rootMargin: window.innerWidth > 768 ? '0px 0px -100px 0px' : '0px 0px -50px 0px'
-  }
-);
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+  
     return () => {
-      if (observer && sectionRef.current) {
-        observer.disconnect();
+      if (observer && currentSection) {
+        observer.unobserve(currentSection);
       }
     };
   }, []);
@@ -77,7 +79,7 @@ const GallerySection = () => {
           key={currentIndex}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          exit={{ opacity: 0}}
           transition={{ duration: 0.5 }}>
           <img
             src={images[currentIndex]}
