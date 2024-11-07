@@ -1,20 +1,15 @@
-// components/Header.js
-import './Header.css';
+// components/Footer.js
+import './Footer.css';
 
-const Header = () => {
+const Footer = () => {
   return (
-    <header role="banner" className="header">
-      <nav className="nav">
-        <h1 className="header-title">대여 공간 홍보 홈페이지</h1>
-        <button className="nav-toggle" aria-label="Toggle navigation menu">☰</button>
-        <ul className="nav-list">
-          <li><a href="#about" className="nav-link">About</a></li>
-          <li><a href="#gallery" className="nav-link">Gallery</a></li>
-          <li><a href="#contact" className="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <footer className="footer"> 
+      <div className="footer-content">
+        <h2 className="footer-title"><a href="/" className="footer-link">브링 더 매직</a></h2>
+        <p> Copyright &copy; 2024. All Rights reserved.</p>
+      </div>
+    </footer>
   );
 };
 
-export default Header;
+export default Footer;

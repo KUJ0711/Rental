@@ -1,20 +1,23 @@
+"use client";
+import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import GallerySection from '../components/GallerySection';
-import ContactSection from '../components/ContactSection';
-import '../styles/Home.css';
+import MessageSection from '../components/MessageSection';
 
 export default function Home() {
+  const [showHero, setShowHero] = useState(true);
+
   return (
     <>
       <Header />
       <main className="main-content">
-        <HeroSection />
-        <AboutSection />
+        {showHero && <HeroSection />}
+        <AboutSection setShowHero={setShowHero} />
         <GallerySection />
-        <ContactSection />
+        <MessageSection/>
       </main>
       <Footer />
     </>

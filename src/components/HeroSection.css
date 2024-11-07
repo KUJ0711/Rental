@@ -1,64 +1,63 @@
 /* components/HeroSection.css */
 
 .hero-section {
-    background-color: #f8f9fa;
-    padding: 70px 20px;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 30px;
-  }
-  
+  background-color: var(--background-color); /* 크림 화이트 */
+  padding: 70px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text-color); /* 다크 그레이 */
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  color: var(--text-color); /* 다크 그레이 */
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
   .hero-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 25px;
+    font-size: 2.5rem;
   }
-  
+
   .hero-description {
-    font-size: 1.3rem;
-    color: #444;
-    line-height: 1.8;
-    max-width: 700px;
-    margin: 0 auto;
+    font-size: 1.2rem;
   }
-  
-  @media (max-width: 1024px) {
-    .hero-title {
-      font-size: 2.5rem;
-    }
-  
-    .hero-description {
-      font-size: 1.2rem;
-    }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
   }
-  
-  @media (max-width: 768px) {
-    .hero-title {
-      font-size: 2rem;
-    }
-  
-    .hero-description {
-      font-size: 1.1rem;
-      max-width: 90%;
-    }
-  
-    .hero-section {
-      padding: 50px 15px;
-    }
+
+  .hero-description {
+    font-size: 1.1rem;
+    max-width: 90%;
   }
-  
-  @media (max-width: 480px) {
-    .hero-title {
-      font-size: 1.8rem;
-    }
-  
-    .hero-description {
-      font-size: 1rem;
-    }
-  
-    .hero-section {
-      padding: 40px 10px;
-    }
+
+  .hero-section {
+    padding: 50px 15px;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    padding: 40px 10px;
+  }
+}

@@ -1,48 +1,51 @@
 /* components/Footer.css */
 
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #444;
-  }
-  
+  background-color: var(--accent-color); /* 미드나잇 블루 */
+  color: var(--background-color); /* 크림 화이트 */
+  padding: 1.25rem;
+  text-align: center;
+  border-top: 1px solid var(--text-color); /* 다크 그레이 */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-link {
+  color: var(--background-color); /* 크림 화이트 */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  color: var(--secondary-color); /* 페일 퍼플 */
+}
+
+@media (max-width: 768px) {
   .footer-content {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 10px;
   }
-  
+
   .footer-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
   }
-  
-  .footer-link {
-    color: #00bfff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-link:hover {
-    color: #ffffff;
-  }
-  
-  @media (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .footer-links {
-      gap: 10px;
-    }
-  }
-  
+}

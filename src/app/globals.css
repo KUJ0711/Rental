@@ -1,21 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* globals.css */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary-color: #FFB7C3; /* 소프트 핑크 */
+  --secondary-color: #C6A0FF; /* 페일 퍼플 */
+  --accent-color: #454C7D; /* 미드나잇 블루 */
+  --background-color: #FFF9F3; /* 크림 화이트 */
+  --text-color: #333333; /* 다크 그레이 */
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header, .footer {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  padding: 20px;
+  text-align: center;
 }

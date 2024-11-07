@@ -1,0 +1,68 @@
+/* components/MessageSection.css */
+
+.message-section {
+    background-color: var(--background-color);
+    padding: 10% 5%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .message-section.visible {
+    opacity: 1;
+  }
+  
+  .message-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+  
+  .message-content {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin: 0;
+  }
+  
+  @media (min-width: 1024px) {
+    .message-section {
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .message-title {
+      font-size: 1.8rem;
+    }
+  
+    .message-content {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  
+    .message-section {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .message-title {
+      font-size: 1.8rem;
+    }
+  
+    .message-content {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  
+    .message-section {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+    }
+  }
+  
