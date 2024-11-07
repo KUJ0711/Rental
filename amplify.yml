@@ -8,7 +8,7 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: /build  # Next.js는 보통 '.next' 디렉토리 또는 'out' 디렉토리를 사용합니다.
+    baseDirectory: .next  # Next.js의 빌드 결과물 폴더
     files:
       - '**/*'
   cache:
