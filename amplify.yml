@@ -1,0 +1,16 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install --legacy-peer-deps
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: /build  # Next.js는 보통 '.next' 디렉토리 또는 'out' 디렉토리를 사용합니다.
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
