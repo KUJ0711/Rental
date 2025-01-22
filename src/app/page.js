@@ -6,6 +6,7 @@ import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import GallerySection from '../components/GallerySection';
 import MessageSection from '../components/MessageSection';
+import FloatingButton from '../components/Kakao';
 
 export default function Home() {
   const [showHero, setShowHero] = useState(true);
@@ -18,6 +19,7 @@ export default function Home() {
         <AboutSection setShowHero={setShowHero} />
         <GallerySection />
         <MessageSection/>
+        <FloatingButton/>
       </main>
       <Footer />
     </>

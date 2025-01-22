@@ -21,7 +21,7 @@ const Header = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 1.5, ease: "easeOut" }}
           >
-            브링 더 매직
+            Bring the Magic
           </motion.div>
         </Link>
 
@@ -56,7 +56,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/#message">
+            <Link href="/#message-section-unique">
               <motion.div
                 className="nav-link nav-link-center"
                 initial={{ opacity: 0 }}

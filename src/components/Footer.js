@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="footer-content">
         <h2 className="footer-title">
           <Link href="/">
-            브링 더 매직
+            Bring the Magic
           </Link>
         </h2>
-        <p> Copyright &copy; 2024. All Rights reserved.</p>
+        <p> Copyright &copy; 2025. All Rights reserved.</p>
       </div>
     </footer>
   );

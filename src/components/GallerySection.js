@@ -74,19 +74,13 @@ const GallerySection = () => {
       <div className="gallery-container">
         <div className="gallery-overlay gallery-overlay-left" onClick={goToPrevious}></div>
         <div className="gallery-overlay gallery-overlay-right" onClick={goToNext}></div>
-        <motion.div
-          className="gallery-image-wrapper"
-          key={currentIndex}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0}}
-          transition={{ duration: 0.5 }}>
+        <div className="gallery-image-wrapper" key={currentIndex}>
           <img
             src={images[currentIndex]}
             alt={`갤러리 이미지 ${currentIndex + 1}`}
             className="gallery-image"
           />
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );
